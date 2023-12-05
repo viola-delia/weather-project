@@ -13,6 +13,9 @@ function showTemperature(response) {
   let temperatureNow = Math.round(response.data.temperature.current);
   let currentTemperature = document.querySelector("#currentTempValue");
   currentTemperature.innerHTML = temperatureNow;
+
+  let cityElement = document.querySelector("#current-city");
+  cityElement.innerHTML = response.data.city;
 }
 
 function formatDate(date) {
